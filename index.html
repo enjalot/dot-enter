@@ -54,7 +54,17 @@
 	
 	<script src="js/sStory.js" type="text/javascript" charset="utf-8"></script>
 	
-	
+	 <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-30237258-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 	
 </head>
 
@@ -95,6 +105,8 @@
 <div class="video-container">
 <iframe src="{{ url }}" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>		
 </div>
+<h2 class="{{ shade }}">{{{ title }}}</h2>
+<div class="imagecaption longcaption"><p>{{{ text }}}</p></div>
 </script>
 
 <script id="soundcloud" type="text/html">
@@ -112,84 +124,94 @@
 var examplesections = [
 {
     title: "dot enter"
-    ,type: "image"
+    ,type: "image2"
     ,url: "http://d3a9pqeyre6pa0.cloudfront.net/wp-content/uploads/2010/07/cropped-turtle_nom1.jpg"
     ,shade: "light"
+    ,caption: "hello world, i'm <a href='http://twitter.com/enjalo'>@enjalot</a> and this is <b>dot enter</b>"
 },
 {
 	title: "color scales"
 	,type: "vimeo"
 	,url: "http://player.vimeo.com/video/49741435?byline=0&portrait=0&color=ffffff"
 	,height: "500px"  
+    ,text: "color is one of the most fundamental ways we can visualize data, and this is how i think about it."
 },
 {
 	title: "image cereal"
 	,type: "vimeo"
 	,url: "http://player.vimeo.com/video/49763977?byline=0&portrait=0&color=ffffff"
 	,height: "500px"  
+    ,text: "have you ever wanted to rip the SVG you just made with d3 out of the browser and use it somewhere else? Let's do that."
 },
 {
 	title: "three little circles"
 	,type: "vimeo"
 	,url: "http://player.vimeo.com/video/49741439?byline=0&portrait=0&color=ffffff"
 	,height: "500px"  
+    ,text: "this is how i think about three little circles"
 },
 {
 	title: "path"
 	,type: "vimeo"
 	,url: "http://player.vimeo.com/video/49761329?byline=0&portrait=0&color=ffffff"
 	,height: "500px"  
+    ,text: "i blaze my own path"
 },
 {
 	title: "graphicalweb workshop"
 	,type: "vimeo"
 	,url: "http://player.vimeo.com/video/49741436?byline=0&portrait=0&color=ffffff"
 	,height: "500px"  
+    ,text: "interlude: i gave a workshop at the Graphical Web 2012 conference on d3, maybe the materials will be useful for you"
 },
 {
 	title: "simple transition"
 	,type: "vimeo"
 	,url: "http://player.vimeo.com/video/49741438?byline=0&portrait=0&color=ffffff"
 	,height: "500px"  
+    ,text: "transitions can get complex, so lets make sure we have the basics down first!"
 },
 {
 	title: "stacks"
 	,type: "vimeo"
 	,url: "http://player.vimeo.com/video/49974373?byline=0&portrait=0&color=ffffff"
 	,height: "500px"  
+    ,text: "i don't like stacking bar charts, but somehow you always gotta do it"
 },
 {
 	title: "move to front"
 	,type: "vimeo"
 	,url: "http://player.vimeo.com/video/49741437?byline=0&portrait=0&color=ffffff"
 	,height: "500px"  
+    ,text: "this is something that you wont need right away, but when you do need it you will remember this and say 'oh yeah what was that function again?'"
 },
 {
 	title: "move along"
 	,type: "vimeo"
 	,url: "http://player.vimeo.com/video/49974370?byline=0&portrait=0&color=ffffff"
 	,height: "500px"  
+    ,text: "this is some pretty tricky SVG hacking, but i love it for the technique"
 },
 {
 	title: "hello world"
 	,type: "vimeo"
 	,url: "http://player.vimeo.com/video/49974371?byline=0&portrait=0&color=ffffff"
 	,height: "500px"  
+    ,text: "let's put ourselves on the map!"
 },
 {
 	title: "thanks"
 	,type: "vimeo"
 	,url: "http://player.vimeo.com/video/50117169?byline=0&portrait=0&color=ffffff"
 	,height: "500px"  
+    ,text: "i'm out! hope you enjoyed, hope you learned something."
 },
-
-
 {
-    title: "<a href='http://google.com'>You can make a link</a>"
+    title: "<a href='http://enjalot.com/'>Tributary<a/>"
     ,type: "color"
     ,color: "#ff0000"
     ,shade: "light"
-    ,text: "hi i'm text"
+    ,text: "oh yeah, follow me on twitter: <a href='http://twitter.com/enjalot'>@enjalot</a><br>"
     ,height: "100px"
 },
 ]

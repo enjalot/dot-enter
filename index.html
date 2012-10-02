@@ -88,10 +88,13 @@
 <div class="imagecaption"><p>{{{ caption }}}</p></div>
 </script>
 
+
 <script id="image3" type="text/html">
 <h2 class="{{ shade }}">{{ title }}</h2> 
 <!-- <img src="{{ url }}" title="{{ caption }}" style="height: {{ height }};" /> -->
-<div class="imagecaption longcaption"><p>{{{ text }}}</p></div>
+<div class="imagecaption longcaption"><p>{{{ text }}}
+
+    </p></div>
 </script>
 
 <script id="color" type="text/html">
@@ -100,7 +103,7 @@
 </script>
 
 
-
+<!--
 <script id="vimeo" type="text/html">
 <div class="video-container">
 <iframe src="{{ url }}" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>		
@@ -108,6 +111,22 @@
 <h2 class="{{ shade }}">{{{ title }}}</h2>
 <div class="imagecaption longcaption"><p>{{{ text }}}</p></div>
 </script>
+-->
+
+<script id="vimeo" type="text/html">
+<div class="video-container">
+<iframe src="http://player.vimeo.com/video/{{ id }}?byline=0&portrait=0&color=ffffff" width="400" height="300" frameborder="0" wmode="transparent" webkitAllowFullScreen mozallowfullscreen allowFullScreen><param name="wmode" value="opaque"></iframe>		
+</div>
+{{#text}}
+<div class="video-caption">
+{{text}}
+<br><a href='{{code}}' target="_blank">code</a>
+<a href="http://vimeo.com/{{ id }}" target="_blank">video</a>
+</div>
+{{/text}}
+</script>
+
+
 
 <script id="soundcloud" type="text/html">
 <div class="soundcloud-container">
@@ -125,87 +144,100 @@ var examplesections = [
 {
     title: "dot enter"
     ,type: "image2"
-    ,url: "http://d3a9pqeyre6pa0.cloudfront.net/wp-content/uploads/2010/07/cropped-turtle_nom1.jpg"
+//    ,url: "http://d3a9pqeyre6pa0.cloudfront.net/wp-content/uploads/2010/07/cropped-turtle_nom1.jpg"
+    ,url: "http://enjalot-tribstyle.s3.amazonaws.com/graff.png"
     ,shade: "light"
-    ,caption: "hello world, i'm <a href='http://twitter.com/enjalo'>@enjalot</a> and this is <b>dot enter</b>"
+    ,caption: "hello world, i'm <a href='http://twitter.com/enjalot'>@enjalot</a> and this is <b>dot enter</b>"
 },
 {
 	title: "color scales"
 	,type: "vimeo"
-	,url: "http://player.vimeo.com/video/49741435?byline=0&portrait=0&color=ffffff"
+    ,id: "49741435"
 	,height: "500px"  
     ,text: "color is one of the most fundamental ways we can visualize data, and this is how i think about it."
+    ,code: "http://enjalot.com/tributary/3650755/"
 },
 {
 	title: "image cereal"
 	,type: "vimeo"
-	,url: "http://player.vimeo.com/video/49763977?byline=0&portrait=0&color=ffffff"
+    ,id: "49763977"
 	,height: "500px"  
     ,text: "have you ever wanted to rip the SVG you just made with d3 out of the browser and use it somewhere else? Let's do that."
+    ,code: "http://enjalot.com/tributary/3747523/"
 },
 {
 	title: "three little circles"
 	,type: "vimeo"
-	,url: "http://player.vimeo.com/video/49741439?byline=0&portrait=0&color=ffffff"
+    ,id: "49741439"
 	,height: "500px"  
     ,text: "this is how i think about three little circles"
+    ,code: "http://enjalot.com/tributary/3651352/"
 },
 {
 	title: "path"
 	,type: "vimeo"
-	,url: "http://player.vimeo.com/video/49761329?byline=0&portrait=0&color=ffffff"
+    ,id: "49761329"
 	,height: "500px"  
     ,text: "i blaze my own path"
+    ,code: "http://enjalot.com/tributary/3669838/"
 },
 {
 	title: "graphicalweb workshop"
 	,type: "vimeo"
-	,url: "http://player.vimeo.com/video/49741436?byline=0&portrait=0&color=ffffff"
+    ,id: "49741436"
 	,height: "500px"  
     ,text: "interlude: i gave a workshop at the Graphical Web 2012 conference on d3, maybe the materials will be useful for you"
+    ,code: "http://enjalot.github.com/intro-d3/costofliving/"
 },
 {
 	title: "simple transition"
 	,type: "vimeo"
-	,url: "http://player.vimeo.com/video/49741438?byline=0&portrait=0&color=ffffff"
+    ,id: "49741438"
 	,height: "500px"  
     ,text: "transitions can get complex, so lets make sure we have the basics down first!"
+    ,code: "http://enjalot.com/tributary/3651651/"
 },
 {
 	title: "stacks"
 	,type: "vimeo"
-	,url: "http://player.vimeo.com/video/49974373?byline=0&portrait=0&color=ffffff"
+    ,id: "49974373"
 	,height: "500px"  
     ,text: "i don't like stacking bar charts, but somehow you always gotta do it"
+    ,code: "http://enjalot.com/tributary/3758929/"
 },
 {
 	title: "move to front"
 	,type: "vimeo"
-	,url: "http://player.vimeo.com/video/49741437?byline=0&portrait=0&color=ffffff"
+    ,id: "49741437"
 	,height: "500px"  
     ,text: "this is something that you wont need right away, but when you do need it you will remember this and say 'oh yeah what was that function again?'"
+    ,code: "http://enjalot.com/tributary/3651456/"
 },
 {
 	title: "move along"
 	,type: "vimeo"
-	,url: "http://player.vimeo.com/video/49974370?byline=0&portrait=0&color=ffffff"
+    ,id: "49974370"
 	,height: "500px"  
     ,text: "this is some pretty tricky SVG hacking, but i love it for the technique"
+    ,code: "http://enjalot.com/tributary/3758369/"
 },
 {
 	title: "hello world"
 	,type: "vimeo"
-	,url: "http://player.vimeo.com/video/49974371?byline=0&portrait=0&color=ffffff"
+    ,id:"49974371"
 	,height: "500px"  
     ,text: "let's put ourselves on the map!"
+    ,code: "http://enjalot.com/tributary/3762317/"
 },
 {
 	title: "thanks"
 	,type: "vimeo"
-	,url: "http://player.vimeo.com/video/50117169?byline=0&portrait=0&color=ffffff"
+    ,id: "50117169"
 	,height: "500px"  
     ,text: "i'm out! hope you enjoyed, hope you learned something."
+    ,code: "http://enjalot.com/bigfish/3779865/"
 },
+    /*
 {
     title: "<a href='http://enjalot.com/'>Tributary<a/>"
     ,type: "color"
@@ -214,6 +246,16 @@ var examplesections = [
     ,text: "oh yeah, follow me on twitter: <a href='http://twitter.com/enjalot'>@enjalot</a><br>"
     ,height: "100px"
 },
+*/
+{
+    title: "dot exit"
+    ,type: "image2"
+//    ,url: "http://d3a9pqeyre6pa0.cloudfront.net/wp-content/uploads/2010/07/cropped-turtle_nom1.jpg"
+    ,url: "http://enjalot-tribstyle.s3.amazonaws.com/graff_end.png"
+    ,shade: "light"
+    ,caption: "this has been <b>dot enter</b><br>a side effect of <a target='_blank' href='http://enjalot.com/'>tributary</a> <br> mixtape cover art by <a target='_blank' href='https://twitter.com/bausofthenauf'>@bausofthenauf</a><br>page put together with <a target='_blank' href='https://github.com/ejfox/sStory'>sStory</a> by <a target='_blank' href='https://twitter.com/mrejfox'>@ejfox</a><br><br>follow me <a target='_blank' href='http://twitter.com/enjalot'>@enjalot</a><br>i blog d3 + tributary stuff <a target='_blank' href='http://www.tumblr.com/blog/enjalot'>here</a> <br><a target='_blank' href='https://twitter.com/hellomainstem'>mainstem</a> represent!"
+}
+
 ]
 
 
@@ -222,8 +264,8 @@ var examplesections = [
 $(document).ready(function(){
 	sStory(examplesections);
 });
-
 	
 </script>
+
 </body>
 </html>
